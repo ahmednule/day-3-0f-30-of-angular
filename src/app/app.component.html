@@ -1,15 +1,75 @@
-<main class="main">
-  <h1>This is the header of the application</h1>
-  <nav>
-    <li>
-      <a routerLink="about" routerLinkActive="active" ariaCurrentWhenActive="page">About</a>
-    </li>
-    <li>
-      <a routerLink="contact" routerLinkActive="active" ariaCurrentWhenActive="page">
-        Contact page
-      </a>
-    </li>
-  </nav>
-</main>
+<main class="main p-8 bg-gray-50">
+  <header class="bg-white shadow-sm sticky top-0 z-10">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between items-center py-4">
+        <div class="flex items-center">
+          <a routerLink="/" class="text-2xl font-bold text-blue-600">RemoteZen</a>
+          <span class="ml-2 text-gray-600 text-sm hidden sm:inline">Work Smarter, Live Better</span>
+        </div>
 
-<router-outlet />
+        <button class="sm:hidden text-gray-700 focus:outline-none" aria-label="Toggle menu">
+          <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+          </svg>
+        </button>
+
+        <nav class="hidden sm:flex space-x-8" aria-label="Main navigation">
+          <div class="relative group">
+            <button class="text-gray-700 hover:text-blue-600 transition-colors px-3 py-2 rounded-md font-medium">
+              Product
+              <span class="absolute bottom-0 left-0 w-full h-0.5 bg-blue-600 transform scale-x-0 group-hover:scale-x-100 transition-transform"></span>
+            </button>
+            <div class="absolute hidden group-hover:block bg-white shadow-lg rounded-md mt-2 w-48">
+              <a routerLink="/features" routerLinkActive="active" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">Features</a>
+              <a routerLink="/security" routerLinkActive="active" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">Security</a>
+              <a routerLink="/pricing" routerLinkActive="active" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">Pricing</a>
+            </div>
+          </div>
+
+          <div class="relative group">
+            <button class="text-gray-700 hover:text-blue-600 transition-colors px-3 py-2 rounded-md font-medium">
+              Solutions
+              <span class="absolute bottom-0 left-0 w-full h-0.5 bg-blue-600 transform scale-x-0 group-hover:scale-x-100 transition-transform"></span>
+            </button>
+            <div class="absolute hidden group-hover:block bg-white shadow-lg rounded-md mt-2 w-48">
+              <a routerLink="/solutions/individuals" routerLinkActive="active" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">For Individuals</a>
+              <a routerLink="/solutions/teams" routerLinkActive="active" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">For Teams</a>
+              <a routerLink="/solutions/hr" routerLinkActive="active" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">For HR Leaders</a>
+            </div>
+          </div>
+
+          <div class="relative group">
+            <button class="text-gray-700 hover:text-blue-600 transition-colors px-3 py-2 rounded-md font-medium">
+              Resources
+              <span class="absolute bottom-0 left-0 w-full h-0.5 bg-blue-600 transform scale-x-0 group-hover:scale-x-100 transition-transform"></span>
+            </button>
+            <div class="absolute hidden group-hover:block bg-white shadow-lg rounded-md mt-2 w-48">
+              <a routerLink="/blog" routerLinkActive="active" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">Blog</a>
+              <a routerLink="/webinars" routerLinkActive="active" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">Webinars</a>
+              <a routerLink="/roi-calculator" routerLinkActive="active" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">ROI Calculator</a>
+            </div>
+          </div>
+
+          <div class="relative group">
+            <button class="text-gray-700 hover:text-blue-600 transition-colors px-3 py-2 rounded-md font-medium">
+              About Us
+              <span class="absolute bottom-0 left-0 w-full h-0.5 bg-blue-600 transform scale-x-0 group-hover:scale-x-100 transition-transform"></span>
+            </button>
+            <div class="absolute hidden group-hover:block bg-white shadow-lg rounded-md mt-2 w-48">
+              <a routerLink="/about/mission" routerLinkActive="active" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">Mission</a>
+              <a routerLink="/careers" routerLinkActive="active" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">Careers</a>
+              <a routerLink="/press" routerLinkActive="active" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">Press</a>
+            </div>
+          </div>
+        </nav>
+
+        <div class="hidden sm:flex items-center space-x-4">
+          <a routerLink="/signin" class="text-gray-700 hover:text-blue-600">Sign In</a>
+          <a routerLink="/get-started" class="bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700">Get Started</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <router-outlet />
+</main>
