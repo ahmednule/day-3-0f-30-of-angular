@@ -1,5 +1,15 @@
 <main class="main">
   <h1>This is the home page</h1>
+  <nav>
+    <li>
+      <a routerLink="about" routerLinkActive="active" ariaCurrentWhenActive="page">About</a>
+    </li>
+    <li>
+      <a routerLink="contact" routerLinkActive="active" ariaCurrentWhenActive="page">
+        Contact page
+      </a>
+    </li>
+  </nav>
 </main>
 
 <router-outlet />
