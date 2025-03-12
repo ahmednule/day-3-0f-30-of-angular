@@ -1,5 +1,7 @@
 {
   "name": "day-3-0f-30-of-angular",
+  "author": "ahmednule",
+  "description": "This is the day 3 of angular self paced learning--journey in my journey to be a self paced dev",
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
