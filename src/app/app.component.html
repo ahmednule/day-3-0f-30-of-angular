@@ -51,10 +51,12 @@
           </div>
 
           <div class="relative group">
-            <button class="text-gray-700 hover:text-blue-600 transition-colors px-3 py-2 rounded-md font-medium">
-              About Us
-              <span class="absolute bottom-0 left-0 w-full h-0.5 bg-blue-600 transform scale-x-0 group-hover:scale-x-100 transition-transform"></span>
-            </button>
+     <a routerLink="/about" routerLinkActive="active">
+      <button class="text-gray-700 hover:text-blue-600 transition-colors px-3 py-2 rounded-md font-medium">
+        About Us
+        <span class="absolute bottom-0 left-0 w-full h-0.5 bg-blue-600 transform scale-x-0 group-hover:scale-x-100 transition-transform"></span>
+      </button>
+     </a>
             <div class="absolute hidden group-hover:block bg-white shadow-lg rounded-md mt-2 w-48">
               <a routerLink="/about/mission" routerLinkActive="active" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">Mission</a>
               <a routerLink="/careers" routerLinkActive="active" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">Careers</a>
